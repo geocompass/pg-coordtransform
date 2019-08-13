@@ -8,7 +8,7 @@ DECLARE
     lat        numeric;
 BEGIN
     if st_geometrytype(geom) != 'ST_Point' then
-      return geom;
+      return null;
     end if;
     lon := st_x(geom);
     lat := st_y(geom);

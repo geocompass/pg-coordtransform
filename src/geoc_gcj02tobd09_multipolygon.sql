@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION "public"."geoc_gcj02towgs84_multipolygon"("source_geom" "public"."geometry")
+CREATE OR REPLACE FUNCTION "public"."geoc_gcj02tobd09_multipolygon"("source_geom" "public"."geometry")
   RETURNS "public"."geometry" AS $BODY$
 DECLARE
     target_parts    geometry[];
@@ -11,7 +11,7 @@ BEGIN
         RETURN null;
     END IF;
         FOR single_polygon IN SELECT (ST_Dump($1)).geom LOOP
-                single_polygon_trans := geoc_gcj02towgs84_polygon(single_polygon); 
+                single_polygon_trans := geoc_gcj02tobd09_polygon(single_polygon); 
                 target_parts := array_append(target_parts,single_polygon_trans);
         END LOOP;
 				

@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION "public"."geoc_gcj02towgs84_polygon"("source_geom" "public"."geometry")
+CREATE OR REPLACE FUNCTION "public"."geoc_gcj02tobd09_polygon"("source_geom" "public"."geometry")
   RETURNS "public"."geometry" AS $BODY$
 DECLARE
     target_parts    geometry[];
@@ -16,7 +16,7 @@ BEGIN
     FOR single_polygon IN SELECT ST_ExteriorRing ((st_dumprings($1)).geom) as geom LOOP				
         source_npoints := ST_NPoints(single_polygon); 
         single_line  := ST_RemovePoint(single_polygon, source_npoints - 1);  
-        single_line_trans := geoc_gcj02towgs84_line(single_line);  
+        single_line_trans := geoc_gcj02tobd09_line(single_line);  
         target_parts := array_append(target_parts, ST_AddPoint(single_line_trans, ST_PointN(single_line_trans, 1)));  
     END LOOP;
     SELECT ST_MakePolygon(target_parts[1], target_parts[2:array_upper(target_parts, 1)]) INTO final_geom;  

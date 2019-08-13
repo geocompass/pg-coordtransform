@@ -7,7 +7,7 @@ DECLARE
 	
 BEGIN
 	IF st_srid(geom) != 4490 and st_srid(geom) != 4326 THEN
-			RETURN geom;
+			RETURN null;
 	end if;
  	CASE ST_GeometryType(geom)
     	when 'ST_LineString' then 

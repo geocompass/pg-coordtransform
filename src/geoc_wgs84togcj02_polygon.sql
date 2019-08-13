@@ -10,7 +10,7 @@ DECLARE
 
 BEGIN
     IF ST_GeometryType(source_geom) != 'ST_Polygon' THEN
-        RETURN source_geom;
+        RETURN null;
     END IF;
 
     FOR single_polygon IN SELECT ST_ExteriorRing ((st_dumprings($1)).geom) as geom LOOP				
