@@ -6,11 +6,8 @@ DECLARE
 		multiArr          geometry[]; 
 	
 BEGIN
-	IF st_srid(geom) != '4490' THEN
-			RETURN geom;
-	end if;
-	IF st_srid(geom) != '4326' THEN
-			RETURN geom;
+IF st_srid(geom) != '4490' and  st_srid(geom) != '4326'THEN
+        RETURN null;
 	end if;
  	CASE ST_GeometryType(geom)
     	when 'ST_LineString' then 

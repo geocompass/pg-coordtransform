@@ -2,10 +2,7 @@ CREATE OR REPLACE FUNCTION "public"."geoc_gcj02towgs84"("geom" "public"."geometr
   RETURNS "public"."geometry" AS $BODY$
 DECLARE
 BEGIN
-IF st_srid(geom) != '4490' THEN
-        RETURN null;
-end if;
-IF st_srid(geom) != '4326' THEN
+IF st_srid(geom) != '4490' and  st_srid(geom) != '4326'THEN
         RETURN null;
 end if;
 case ST_GeometryType(geom)
