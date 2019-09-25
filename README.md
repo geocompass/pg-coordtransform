@@ -32,6 +32,8 @@ PostgreSQL安装PostGIS扩展
 
 - 九天气象（lzuniujp08）
 
+- 深圳普天宜通股份有限公司（ShareQiu1994）
+
 - 中原百科（zhongyuanbaike）
 
 - MonsterBOBO（hanrea）
