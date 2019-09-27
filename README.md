@@ -3,7 +3,7 @@
   <img alt="Version" src="https://img.shields.io/badge/version-1.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
-> coordtransform function base on PostgreSQL and PostGIS. support WGS84 GCJ02 BD09
+> 基于PostgreSQL和PostGIS的坐标转换函数，支持点、线、面的WGS84、GCJ02以及BD09坐标系之间互转。
 ## Example
 ```sql
 GCJ02转WGS84
