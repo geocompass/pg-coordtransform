@@ -1524,3 +1524,51 @@ END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
   COST 100;
+  CREATE OR REPLACE FUNCTION "public"."geoc_cgcs2000togcj02"("geom" "public"."geometry")
+  RETURNS "public"."geometry" AS $BODY$
+DECLARE
+BEGIN
+IF st_srid(geom) != '4490' THEN
+        RETURN null;
+end if;
+return geoc_wgs84togcj02(st_transform(st_setsrid(geom,4490),4326));
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+  CREATE OR REPLACE FUNCTION "public"."geoc_cgcs2000tobd09"("geom" "public"."geometry")
+  RETURNS "public"."geometry" AS $BODY$
+DECLARE
+BEGIN
+IF st_srid(geom) != '4490' THEN
+        RETURN null;
+end if;
+return geoc_wgs84tobd09(st_transform(st_setsrid(geom,4490),4326));
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+  CREATE OR REPLACE FUNCTION "public"."geoc_bd09tocgcs2000"("geom" "public"."geometry")
+  RETURNS "public"."geometry" AS $BODY$
+DECLARE
+BEGIN
+IF st_srid(geom) != '4490' THEN
+        RETURN null;
+end if;
+return st_transform(st_setsrid(geoc_bd09towgs84(geom),4326),4490);
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+  CREATE OR REPLACE FUNCTION "public"."geoc_gcj02tocgcs2000"("geom" "public"."geometry")
+  RETURNS "public"."geometry" AS $BODY$
+DECLARE
+BEGIN
+IF st_srid(geom) != '4490' THEN
+        RETURN null;
+end if;
+return st_transform(st_setsrid(geoc_gcj02towgs84(geom),4326),4490);
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100
