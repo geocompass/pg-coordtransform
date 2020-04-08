@@ -424,7 +424,7 @@ BEGIN
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
-  COST 100;;
+  COST 100;
   CREATE OR REPLACE FUNCTION "public"."geoc_gcj02towgs84_line"("geom" "public"."geometry")
   RETURNS "public"."geometry" AS $BODY$
 DECLARE
@@ -445,7 +445,7 @@ BEGIN
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
-  COST 100;;
+  COST 100;
   CREATE OR REPLACE FUNCTION "public"."geoc_gcj02towgs84_multiline"("geom" "public"."geometry")
   RETURNS "public"."geometry" AS $BODY$
 DECLARE
@@ -463,7 +463,7 @@ BEGIN
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
-  COST 100;;
+  COST 100;
   CREATE OR REPLACE FUNCTION "public"."geoc_gcj02towgs84_multipoint"("geom" "public"."geometry")
   RETURNS "public"."geometry" AS $BODY$
 DECLARE
@@ -481,7 +481,7 @@ BEGIN
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
-  COST 100;;
+  COST 100;
   CREATE OR REPLACE FUNCTION "public"."geoc_gcj02towgs84_multipolygon"("source_geom" "public"."geometry")
   RETURNS "public"."geometry" AS $BODY$
 DECLARE
@@ -505,7 +505,7 @@ BEGIN
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
-  COST 100;;
+  COST 100;
   CREATE OR REPLACE FUNCTION "public"."geoc_gcj02towgs84_point"("geom" "public"."geometry")
   RETURNS "public"."geometry" AS $BODY$
 DECLARE
@@ -531,7 +531,7 @@ BEGIN
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
-  COST 100;;
+  COST 100;
   CREATE OR REPLACE FUNCTION "public"."geoc_gcj02towgs84_polygon"("source_geom" "public"."geometry")
   RETURNS "public"."geometry" AS $BODY$
 DECLARE
@@ -560,7 +560,7 @@ BEGIN
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
-  COST 100;;
+  COST 100;
   CREATE OR REPLACE FUNCTION "public"."geoc_gcj02towgs84"("geom" "public"."geometry")
   RETURNS "public"."geometry" AS $BODY$
 DECLARE
@@ -587,7 +587,7 @@ BEGIN
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
-  COST 100;;
+  COST 100;
   CREATE OR REPLACE FUNCTION "public"."geoc_is_in_china_bbox"("lon" numeric, "lat" numeric)
   RETURNS "pg_catalog"."bool" AS $BODY$
 DECLARE
@@ -597,7 +597,7 @@ BEGIN
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
-  COST 100;;
+  COST 100;
   CREATE OR REPLACE FUNCTION "public"."geoc_transform_lat"("x" numeric, "y" numeric)
   RETURNS "pg_catalog"."numeric" AS $BODY$
 DECLARE
@@ -612,7 +612,7 @@ BEGIN
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
-  COST 100;;
+  COST 100;
   CREATE OR REPLACE FUNCTION "public"."geoc_transform_lon"("x" numeric, "y" numeric)
   RETURNS "pg_catalog"."numeric" AS $BODY$
 DECLARE
@@ -626,7 +626,7 @@ BEGIN
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
-  COST 100;;
+  COST 100;
   CREATE OR REPLACE FUNCTION "public"."geoc_wgs84togcj02_line"("geom" "public"."geometry")
   RETURNS "public"."geometry" AS $BODY$
 DECLARE
@@ -647,7 +647,7 @@ BEGIN
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
-  COST 100;;
+  COST 100;
   CREATE OR REPLACE FUNCTION "public"."geoc_wgs84togcj02_multiline"("geom" "public"."geometry")
   RETURNS "public"."geometry" AS $BODY$
 DECLARE
@@ -665,7 +665,7 @@ BEGIN
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
-  COST 100;;
+  COST 100;
   CREATE OR REPLACE FUNCTION "public"."geoc_wgs84togcj02_multipoint"("geom" "public"."geometry")
   RETURNS "public"."geometry" AS $BODY$
 DECLARE
@@ -683,7 +683,7 @@ BEGIN
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
-  COST 100;;
+  COST 100;
   CREATE OR REPLACE FUNCTION "public"."geoc_wgs84togcj02_multipolygon"("source_geom" "public"."geometry")
   RETURNS "public"."geometry" AS $BODY$
 DECLARE
@@ -707,7 +707,7 @@ BEGIN
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
-  COST 100;;
+  COST 100;
   CREATE OR REPLACE FUNCTION "public"."geoc_wgs84togcj02_polygon"("source_geom" "public"."geometry")
   RETURNS "public"."geometry" AS $BODY$
 DECLARE
@@ -736,7 +736,7 @@ BEGIN
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
-  COST 100;;
+  COST 100;
   CREATE OR REPLACE FUNCTION "public"."geoc_wgs84togcj02"("coord" _numeric)
   RETURNS "pg_catalog"."_numeric" AS $BODY$
 DECLARE
@@ -761,7 +761,7 @@ BEGIN
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
-  COST 100;;
+  COST 100;
   CREATE OR REPLACE FUNCTION "public"."geoc_wgs84togcj02_point"("geom" "public"."geometry")
   RETURNS "public"."geometry" AS $BODY$
 DECLARE
@@ -786,7 +786,7 @@ BEGIN
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
-  COST 100;;
+  COST 100;
   CREATE OR REPLACE FUNCTION "public"."geoc_wgs84togcj02"("geom" "public"."geometry")
   RETURNS "public"."geometry" AS $BODY$
 DECLARE
@@ -817,7 +817,7 @@ BEGIN
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
-  COST 100;;
+  COST 100;
 CREATE OR REPLACE FUNCTION "public"."geoc_gcj02towgs84_polygon"("source_geom" "public"."geometry")
   RETURNS "public"."geometry" AS $BODY$
 DECLARE
@@ -1180,7 +1180,7 @@ BEGIN
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
-  COST 100;;
+  COST 100;
 CREATE OR REPLACE FUNCTION "public"."geoc_bd09towgs84_polygon"("source_geom" "public"."geometry")
   RETURNS "public"."geometry" AS $BODY$
 DECLARE
