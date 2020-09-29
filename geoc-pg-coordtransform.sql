@@ -32,6 +32,7 @@ CREATE OR REPLACE FUNCTION "public"."geoc_wgs84togcj02_point"("geom" "public"."g
 DECLARE
     lon     numeric;
     lat     numeric;
+    z       numeric;
     d       jsonb;
     dlon    numeric;
     dlat    numeric;
@@ -47,7 +48,13 @@ BEGIN
     d := geoc_delta(lon, lat);
     dlon := d->0;
     dlat := d->1;
-    return st_makepoint(lon + dlon,lat + dlat);
+
+    z := st_z(geom);
+   	if z is not null then
+    	return st_makepoint(lon + dlon,lat + dlat, z);
+   	else
+    	return st_makepoint(lon + dlon,lat + dlat);
+    end if;
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
@@ -767,6 +774,7 @@ $BODY$
 DECLARE
     lon     numeric;
     lat     numeric;
+    z       numeric;
     d       jsonb;
     dlon    numeric;
     dlat    numeric;
@@ -782,7 +790,13 @@ BEGIN
     d := geoc_delta(lon, lat);
     dlon := d->0;
     dlat := d->1;
-    return st_makepoint(lon + dlon,lat + dlat);
+    
+    z := st_z(geom);
+   	if z is not null then
+    	return st_makepoint(lon + dlon,lat + dlat, z);
+   	else
+    	return st_makepoint(lon + dlon,lat + dlat);
+    end if;
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
