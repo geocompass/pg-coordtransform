@@ -68,7 +68,10 @@ PostgreSQL安装PostGIS扩展
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/geocompass/pg-coordtransform/issues).
+## 开发
+修改src下的文件，使用linux相关命令将文件合并为一个
 
+`find src/ -name "*.sql" | xargs sed 'a\' > geoc-pg-coordtransform.sql`
 ## Show your support
 
 Give a ⭐️ if this project helped you!
