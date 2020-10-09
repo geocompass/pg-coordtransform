@@ -28,4 +28,4 @@ IF st_srid(geom) != '4490' and  st_srid(geom) != '4326'THEN
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
-  COST 100
+  COST 100;

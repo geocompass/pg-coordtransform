@@ -9,4 +9,4 @@ return geoc_wgs84togcj02(st_transform(st_setsrid(geom,4490),4326));
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
-  COST 100
+  COST 100;

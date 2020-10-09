@@ -28,4 +28,4 @@ end if;
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
-  COST 100
+  COST 100;
