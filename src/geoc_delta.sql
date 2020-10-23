@@ -14,8 +14,6 @@ BEGIN
     a  := 6378245;
     dLon := geoc_transform_lon(lon - 105, lat - 35);
     dLat := geoc_transform_lat(lon - 105, lat - 35);
---raise NOTICE 'dLon的值为： %',dLon;
---raise NOTICE 'dLat的值为： %',dLat;
     radLat := lat / 180 * pi();
     magic = sin(radLat);
 

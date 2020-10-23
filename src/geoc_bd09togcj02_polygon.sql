@@ -20,9 +20,7 @@ BEGIN
         target_parts := array_append(target_parts, ST_AddPoint(single_line_trans, ST_PointN(single_line_trans, 1)));  
     END LOOP;
     SELECT ST_MakePolygon(target_parts[1], target_parts[2:array_upper(target_parts, 1)]) INTO final_geom;  
---         raise NOTICE 'final_geom: %',final_geom;
     RETURN final_geom;
-
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE

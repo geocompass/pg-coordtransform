@@ -16,7 +16,6 @@ BEGIN
     END LOOP;
     
     SELECT st_multi(ST_Union(target_parts)) INTO final_geom;
-    raise NOTICE 'final_geom: %',final_geom;
     RETURN final_geom;
 END;
 $BODY$
@@ -68,8 +67,7 @@ BEGIN
         single_line_trans := geoc_bd09towgs84_line(single_line);  
         target_parts := array_append(target_parts, ST_AddPoint(single_line_trans, ST_PointN(single_line_trans, 1)));  
     END LOOP;
-    SELECT ST_MakePolygon(target_parts[1], target_parts[2:array_upper(target_parts, 1)]) INTO final_geom;  
---         raise NOTICE 'final_geom: %',final_geom;
+    SELECT ST_MakePolygon(target_parts[1], target_parts[2:array_upper(target_parts, 1)]) INTO final_geom; 
     RETURN final_geom;
 
 END;
@@ -116,8 +114,6 @@ BEGIN
     a  := 6378245;
     dLon := geoc_transform_lon(lon - 105, lat - 35);
     dLat := geoc_transform_lat(lon - 105, lat - 35);
---raise NOTICE 'dLon的值为： %',dLon;
---raise NOTICE 'dLat的值为： %',dLat;
     radLat := lat / 180 * pi();
     magic = sin(radLat);
 
@@ -234,7 +230,6 @@ BEGIN
         END LOOP;
 				
         SELECT st_multi(ST_Union(target_parts)) INTO final_geom;
-        raise NOTICE 'final_geom: %',final_geom;
         RETURN final_geom;
 END;
 $BODY$
@@ -289,8 +284,7 @@ BEGIN
         single_line_trans := geoc_gcj02tobd09_line(single_line);  
         target_parts := array_append(target_parts, ST_AddPoint(single_line_trans, ST_PointN(single_line_trans, 1)));  
     END LOOP;
-    SELECT ST_MakePolygon(target_parts[1], target_parts[2:array_upper(target_parts, 1)]) INTO final_geom;  
---         raise NOTICE 'final_geom: %',final_geom;
+    SELECT ST_MakePolygon(target_parts[1], target_parts[2:array_upper(target_parts, 1)]) INTO final_geom;
     RETURN final_geom;
 
 END;
@@ -411,7 +405,6 @@ BEGIN
         END LOOP;
 				
         SELECT st_multi(ST_Union(target_parts)) INTO final_geom;
-        raise NOTICE 'final_geom: %',final_geom;
         RETURN final_geom;
 END;
 $BODY$
@@ -464,8 +457,7 @@ BEGIN
         single_line_trans := geoc_gcj02towgs84_line(single_line);  
         target_parts := array_append(target_parts, ST_AddPoint(single_line_trans, ST_PointN(single_line_trans, 1)));  
     END LOOP;
-    SELECT ST_MakePolygon(target_parts[1], target_parts[2:array_upper(target_parts, 1)]) INTO final_geom;  
---         raise NOTICE 'final_geom: %',final_geom;
+    SELECT ST_MakePolygon(target_parts[1], target_parts[2:array_upper(target_parts, 1)]) INTO final_geom; 
     RETURN final_geom;
 
 END;
@@ -613,7 +605,6 @@ BEGIN
         END LOOP;
 				
         SELECT st_multi(ST_Union(target_parts)) INTO final_geom;
-        raise NOTICE 'final_geom: %',final_geom;
         RETURN final_geom;
 END;
 $BODY$
@@ -666,7 +657,6 @@ BEGIN
         target_parts := array_append(target_parts, ST_AddPoint(single_line_trans, ST_PointN(single_line_trans, 1)));  
     END LOOP;
     SELECT ST_MakePolygon(target_parts[1], target_parts[2:array_upper(target_parts, 1)]) INTO final_geom;  
---         raise NOTICE 'final_geom: %',final_geom;
     RETURN final_geom;
 
 END;
@@ -779,7 +769,6 @@ BEGIN
     END LOOP;
     
     SELECT st_multi(ST_Union(target_parts)) INTO final_geom;
-    raise NOTICE 'final_geom: %',final_geom;
     RETURN final_geom;
 END;
 $BODY$
@@ -856,8 +845,7 @@ BEGIN
         single_line_trans := geoc_wgs84togcj02_line(single_line);  
         target_parts := array_append(target_parts, ST_AddPoint(single_line_trans, ST_PointN(single_line_trans, 1)));  
     END LOOP;
-    SELECT ST_MakePolygon(target_parts[1], target_parts[2:array_upper(target_parts, 1)]) INTO final_geom;  
---         raise NOTICE 'final_geom: %',final_geom;
+    SELECT ST_MakePolygon(target_parts[1], target_parts[2:array_upper(target_parts, 1)]) INTO final_geom; 
     RETURN final_geom;
 
 END;
@@ -982,7 +970,7 @@ BEGIN
     END LOOP;
     
     SELECT st_multi(ST_Union(target_parts)) INTO final_geom;
-    raise NOTICE 'final_geom: %',final_geom;
+    
     RETURN final_geom;
 END;
 $BODY$
@@ -1040,7 +1028,7 @@ BEGIN
         target_parts := array_append(target_parts, ST_AddPoint(single_line_trans, ST_PointN(single_line_trans, 1)));  
     END LOOP;
     SELECT ST_MakePolygon(target_parts[1], target_parts[2:array_upper(target_parts, 1)]) INTO final_geom;  
---         raise NOTICE 'final_geom: %',final_geom;
+
     RETURN final_geom;
 
 END;

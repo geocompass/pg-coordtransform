@@ -16,7 +16,6 @@ BEGIN
     END LOOP;
     
     SELECT st_multi(ST_Union(target_parts)) INTO final_geom;
-    raise NOTICE 'final_geom: %',final_geom;
     RETURN final_geom;
 END;
 $BODY$
