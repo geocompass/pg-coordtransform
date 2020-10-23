@@ -42,9 +42,9 @@ PostgreSQL安装PostGIS扩展
 
 - 阿里巴巴（digoal,德哥）
 
-- [CTOLib码库](https://javascript.ctolib.com/geocompass-pg-coordtransform.html)
+- 国信司南（北京）地理信息技术有限公司（本库作者）
 
-- 国信司南
+- [CTOLib码库](https://javascript.ctolib.com/geocompass-pg-coordtransform.html)
 
 - 九天气象（lzuniujp08）
 
