@@ -72,18 +72,6 @@ Contributions, issues and feature requests are welcome!<br />Feel free to check 
 修改src下的文件，使用linux相关命令将文件合并为一个
 
 `find src/ -name "*.sql" | xargs sed 'a\' > geoc-pg-coordtransform.sql`
-## 长期招聘
-- 岗位1：WebGIS开发工程师
-- 岗位2：Node.js后端开发工程师
-- 岗位3：前端开发工程师
-
-GIS专业背景或地图开发经验优先
-
-联系方式：
-
-qq/微信：1016817543
-
-简历投递邮箱：liuhang@geo-compass.com
     
 
 ***
