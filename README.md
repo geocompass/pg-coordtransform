@@ -39,10 +39,6 @@ PostgreSQL安装PostGIS扩展
 复制geoc-pg-coordtansform.sql中代码，在数据库执行
 ```
 
-
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/geocompass/pg-coordtransform/issues).
 ## 开发
 修改src下的文件，使用linux相关命令将文件合并为一个
 
