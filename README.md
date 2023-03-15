@@ -38,52 +38,11 @@ select geoc_bd09togcj02(geom) from test_table
 PostgreSQL安装PostGIS扩展
 复制geoc-pg-coordtansform.sql中代码，在数据库执行
 ```
-# Who use/Who star
 
-- 阿里巴巴（digoal,德哥）
-
-- 国信司南（北京）地理信息技术有限公司（本库作者）
-
-- [CTOLib码库](https://javascript.ctolib.com/geocompass-pg-coordtransform.html)
-
-- 九天气象（lzuniujp08）
-
-- 深圳普天宜通股份有限公司（ShareQiu1994）
-
-- 中原百科（zhongyuanbaike）
-
-- MonsterBOBO（hanrea）
-
-- nocode（sanford）
-
-
-## Author
-
-👤 **LH  QQ:1016817543**
-
-👤 **Wangsb  QQ:1017218804**
-
-* Github: [@MrSmallLiu](https://github.com/MrSmallLiu)
-
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/geocompass/pg-coordtransform/issues).
 ## 开发
 修改src下的文件，使用linux相关命令将文件合并为一个
 
 `find src/ -name "*.sql" | xargs sed 'a\' > geoc-pg-coordtransform.sql`
-## 长期招聘
-- 岗位1：WebGIS开发工程师
-- 岗位2：Node.js后端开发工程师
-- 岗位3：前端开发工程师
-
-GIS专业背景或地图开发经验优先
-
-联系方式：
-
-qq/微信：1016817543
-
-简历投递邮箱：liuhang@geo-compass.com
     
 
 ***

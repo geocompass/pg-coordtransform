@@ -189,7 +189,7 @@ BEGIN
 	  	transform_i :=geoc_gcj02tobd09_line(i);
 		multiArr := array_append(multiArr, transform_i);
 	end LOOP;
-	return st_multi(ST_Union(multiArr));
+	return st_multi(ST_Collect(multiArr));
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
@@ -364,7 +364,7 @@ BEGIN
 	  	transform_i :=geoc_gcj02towgs84_line(i);
 		multiArr := array_append(multiArr, transform_i);
 	end LOOP;
-	return st_multi(ST_Union(multiArr));
+	return st_multi(ST_Collect(multiArr));
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
@@ -564,7 +564,7 @@ BEGIN
 	  	transform_i :=geoc_wgs84tobd09_line(i);
 		multiArr := array_append(multiArr, transform_i);
 	end LOOP;
-	return st_multi(ST_Union(multiArr));
+	return st_multi(ST_Collect(multiArr));
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
@@ -728,7 +728,7 @@ BEGIN
 	  	transform_i :=geoc_wgs84togcj02_line(i);
 		multiArr := array_append(multiArr, transform_i);
 	end LOOP;
-	return st_multi(ST_Union(multiArr));
+	return st_multi(ST_Collect(multiArr));
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
@@ -929,7 +929,7 @@ BEGIN
 	  	transform_i :=geoc_bd09togcj02_line(i);
 		multiArr := array_append(multiArr, transform_i);
 	end LOOP;
-	return st_multi(ST_Union(multiArr));
+	return st_multi(ST_Collect(multiArr));
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
@@ -1100,7 +1100,7 @@ BEGIN
 	  	transform_i :=geoc_bd09towgs84_line(i);
 		multiArr := array_append(multiArr, transform_i);
 	end LOOP;
-	return st_multi(ST_Union(multiArr));
+	return st_multi(ST_Collect(multiArr));
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE

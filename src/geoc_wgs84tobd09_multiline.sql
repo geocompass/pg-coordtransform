@@ -11,7 +11,7 @@ BEGIN
 	  	transform_i :=geoc_wgs84tobd09_line(i);
 		multiArr := array_append(multiArr, transform_i);
 	end LOOP;
-	return st_multi(ST_Union(multiArr));
+	return st_multi(ST_Collect(multiArr));
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
