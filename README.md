@@ -38,32 +38,7 @@ select geoc_bd09togcj02(geom) from test_table
 PostgreSQL安装PostGIS扩展
 复制geoc-pg-coordtansform.sql中代码，在数据库执行
 ```
-# Who use/Who star
 
-- 阿里巴巴（digoal,德哥）
-
-- 国信司南（北京）地理信息技术有限公司（本库作者）
-
-- [CTOLib码库](https://javascript.ctolib.com/geocompass-pg-coordtransform.html)
-
-- 九天气象（lzuniujp08）
-
-- 深圳普天宜通股份有限公司（ShareQiu1994）
-
-- 中原百科（zhongyuanbaike）
-
-- MonsterBOBO（hanrea）
-
-- nocode（sanford）
-
-
-## Author
-
-👤 **LH  QQ:1016817543**
-
-👤 **Wangsb  QQ:1017218804**
-
-* Github: [@MrSmallLiu](https://github.com/MrSmallLiu)
 
 ## 🤝 Contributing
 
